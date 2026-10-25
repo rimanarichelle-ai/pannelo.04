@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr" class="light intro-booting">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <title>Remix PANNELLO — Taste The Best | Menu Numérique</title>
+    <meta name="description" content="Menu numérique officiel du restaurant PANNELLO. Découvrez nos pizzas sauce rouge et blanche, smash burgers, tacos, sandwiches, tombik, calzon, boissons fraîches et crêpes." />
+    <meta name="keywords" content="PANNELLO, Menu Digital, Restaurant, Pizza, Smash Burger, Tacos, Tombik, Algerie, Fast Food" />
+    <meta name="author" content="PANNELLO" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/png" href="/assets/pannello_logo_cropped.png" />
+    <link rel="apple-touch-icon" href="/assets/pannello_logo_cropped.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="PANNELLO" />
+    <meta property="og:title" content="PANNELLO — Taste The Best | Menu Numérique" />
+    <meta property="og:description" content="Menu numérique officiel du restaurant PANNELLO. Découvrez nos pizzas sauce rouge et blanche, smash burgers, tacos, sandwiches, tombik, calzon, boissons fraîches et crêpes." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:image" content="/images/categories/smash-burger.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PANNELLO — Taste The Best | Menu Numérique" />
+    <meta name="twitter:description" content="Menu numérique officiel du restaurant PANNELLO. Découvrez nos pizzas sauce rouge et blanche, smash burgers, tacos, sandwiches, tombik, calzon, boissons fraîches et crêpes." />
+    <meta name="twitter:image" content="/images/categories/smash-burger.jpg" />
+
+    <!-- Fonts: Plus Jakarta Sans (Google Fonts) + Cabinet Grotesk (Fontshare) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&display=swap" rel="stylesheet" />
+
+    <!-- Preload Critical Intro & Light-Mode Header Logos for Zero-Delay Rendering -->
+    <link rel="preload" as="image" href="/assets/pannello_logo_white_cinema.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/pannello_logo_red.png" fetchpriority="high" />
+
+    <!-- Early Theme Initialization (Always Light Mode on Load) & Boot Curtain Fail-Safe Script -->
+    <script>
+      (function() {
+        try {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+          try {
+            localStorage.removeItem('pannello_theme');
+          } catch (storageErr) {}
+          setTimeout(function() {
+            document.documentElement.classList.remove('intro-booting');
+          }, 3600);
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "PANNELLO",
+      "slogan": "TASTE THE BEST",
+      "servesCuisine": ["Pizza", "Burgers", "Tacos", "Fast Food"],
+      "priceRange": "$$",
+      "currenciesAccepted": "DZD",
+      "menu": "https://pannello.menu",
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "Carte PANNELLO",
+        "hasMenuSection": [
+          { "@type": "MenuSection", "name": "Smash Burger" },
+          { "@type": "MenuSection", "name": "Pocket" },
+          { "@type": "MenuSection", "name": "Fries" },
+          { "@type": "MenuSection", "name": "Drinks / Boissons" },
+          { "@type": "MenuSection", "name": "Sweets" },
+          { "@type": "MenuSection", "name": "Pizza Sauce Rouge" },
+          { "@type": "MenuSection", "name": "Pizza Sauce Blanche" },
+          { "@type": "MenuSection", "name": "Tacos" },
+          { "@type": "MenuSection", "name": "Sandwiches" },
+          { "@type": "MenuSection", "name": "Tombik" },
+          { "@type": "MenuSection", "name": "Calzon" }
+        ]
+      }
+    }
+    </script>
+  </head>
+  <body class="min-h-screen bg-[var(--bg-main)] text-[var(--text-main)] transition-colors duration-200 antialiased selection:bg-[#C8102E] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

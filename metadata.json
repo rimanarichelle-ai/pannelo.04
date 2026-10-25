@@ -1,0 +1,8 @@
+{
+  "name": "Remix PANNELLO — Taste The Best | Menu Numérique",
+  "description": "Menu numérique officiel du restaurant PANNELLO. Découvrez nos pizzas sauce rouge et blanche, smash burgers, tacos, sandwiches, tombik, calzon, boissons fraîches et crêpes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
