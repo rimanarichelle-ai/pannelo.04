@@ -1,0 +1,12 @@
+.aistudio/
+node_modules/
+dist/
+build/
+coverage/
+*.log
+*.tsbuildinfo
+*.tar.gz
+.DS_Store
+Thumbs.db
+.env*
+!.env.example
